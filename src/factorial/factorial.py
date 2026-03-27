@@ -1,9 +1,7 @@
 #!/usr/bin/python
 #*-------------------------------------------------------------------------*
 #* factorial.py                                                            *
-#* calcula el factorial de un número                                       *
-#* Dr.P.E.Colla (c) 2022                                                   *
-#* Creative commons                                                        *
+#* calcula el factorial de un número o un rango                            *
 #*-------------------------------------------------------------------------*
 import sys
 
@@ -20,10 +18,20 @@ def factorial(num):
             num -= 1
         return fact 
 
-# Si no se pasa argumento, pedir por teclado
+# Obtener entrada
 if len(sys.argv) < 2:
-    num = int(input("Ingrese un número: "))
+    entrada = input("Ingrese un número o rango (ej: 4-8): ")
 else:
-    num = int(sys.argv[1])
+    entrada = sys.argv[1]
 
-print("Factorial", num, "es", factorial(num))
+# Verificar si es rango
+if "-" in entrada:
+    desde, hasta = entrada.split("-")
+    desde = int(desde)
+    hasta = int(hasta)
+
+    for i in range(desde, hasta + 1):
+        print("Factorial", i, "es", factorial(i))
+else:
+    num = int(entrada)
+    print("Factorial", num, "es", factorial(num))

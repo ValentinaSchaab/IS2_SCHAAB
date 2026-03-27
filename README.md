@@ -34,7 +34,7 @@ El objetivo es visualizar y gestionar los proyectos y trabajos prácticos utiliz
 
 ## Imagen de referencia
 
-![Números primos](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Prime_number_grid.svg/320px-Prime_number_grid.svg.png)
+![Números primos](https://upload.wikimedia.org/wikipedia/commons/8/8c/Prime_number_grid.svg)
 
 ---
 
